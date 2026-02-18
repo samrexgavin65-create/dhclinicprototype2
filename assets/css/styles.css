@@ -230,12 +230,13 @@ ul {
 }
 
 .brand-mark {
-  width: 56px;
+  width: auto;
   height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  box-shadow: 0 8px 16px rgba(87, 36, 24, 0.2);
+  max-width: 140px;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: left center;
+  box-shadow: none;
 }
 
 .brand small {
