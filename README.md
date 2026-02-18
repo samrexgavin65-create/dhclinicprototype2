@@ -65,33 +65,6 @@ Then visit `http://localhost:8080`.
 
 - Booking is already linked to Cliniko:
   - `https://davenport-house.cliniko.com/bookings?business_id=55327`
-- Newsletter form uses client-side validation only.
-- Contact enquiry form now posts to `submit-inquiry.php`.
-
-### Inquiry Form (PHP)
-
-- File: `submit-inquiry.php`
-- Requirements:
-  - PHP-enabled hosting (Apache/Nginx + PHP)
-  - Mail sending enabled on host (`mail()` configured)
-- Contact form in `contact.html` posts to this endpoint and redirects back with:
-  - `?sent=1` for success
-  - `?error=validation` or `?error=mail` on failure
-
-### Minimal PHP form endpoint example
-
-```php
-<?php
-// save as submit-contact.php
-$name = $_POST['name'] ?? '';
-$email = $_POST['email'] ?? '';
-$phone = $_POST['phone'] ?? '';
-$message = $_POST['message'] ?? '';
-mail('info@dhclinic.co.uk', 'Website Enquiry', "Name: $name\nEmail: $email\nPhone: $phone\n\n$message");
-echo 'OK';
-```
-
-Then update `contact.html` form to `action="submit-contact.php" method="post"`.
 
 ## Content Maintenance
 

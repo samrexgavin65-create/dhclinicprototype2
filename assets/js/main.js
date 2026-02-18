@@ -166,26 +166,4 @@
     node.textContent = year;
   });
 
-  var inquiryFeedback = document.querySelector(".inquiry-feedback");
-  if (inquiryFeedback && window.URLSearchParams) {
-    var params = new URLSearchParams(window.location.search);
-    var sent = params.get("sent");
-    var error = params.get("error");
-
-    if (sent === "1") {
-      inquiryFeedback.className = "inquiry-feedback success";
-      inquiryFeedback.textContent = "Thank you. Your enquiry has been sent.";
-    } else if (error === "validation") {
-      inquiryFeedback.className = "inquiry-feedback error";
-      inquiryFeedback.textContent = "Please complete all required fields with valid details.";
-    } else if (error === "mail") {
-      inquiryFeedback.className = "inquiry-feedback error";
-      inquiryFeedback.textContent = "Message sending failed. Please call 0161 304 0117 or email info@dhclinic.co.uk.";
-    }
-
-    if (sent === "1" || error) {
-      var cleanUrl = window.location.pathname + window.location.hash;
-      window.history.replaceState({}, document.title, cleanUrl);
-    }
-  }
 })();
