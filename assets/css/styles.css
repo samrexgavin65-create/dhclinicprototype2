@@ -1,4 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
   --bg: #fffaf3;
@@ -7,7 +7,7 @@
   --surface-solid: #ffffff;
   --surface-soft: #fff5e8;
   --text: #302821;
-  --text-soft: #685d54;
+  --text-soft: #4f463f;
   --heading: #1d2d2b;
   --primary: #8a3b2d;
   --primary-dark: #672419;
@@ -35,9 +35,9 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  font-family: "Manrope", "Segoe UI", sans-serif;
-  font-size: 1.0625rem;
-  line-height: 1.8;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 1.075rem;
+  line-height: 1.75;
   background:
     radial-gradient(circle at 7% 8%, rgba(18, 125, 120, 0.1), transparent 34%),
     radial-gradient(circle at 88% 16%, rgba(138, 59, 45, 0.12), transparent 38%),
@@ -112,8 +112,8 @@ a:focus-visible {
 
 p {
   margin: 0 0 1.25rem;
-  color: var(--text-soft);
-  line-height: 1.8;
+  color: var(--text);
+  line-height: 1.75;
 }
 
 h1,
@@ -122,10 +122,10 @@ h3,
 h4 {
   margin-top: 0;
   color: var(--heading);
-  font-family: "Cormorant Garamond", "Times New Roman", serif;
-  line-height: 1.3;
-  letter-spacing: 0.01em;
-  font-weight: 600;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  line-height: 1.35;
+  letter-spacing: 0;
+  font-weight: 700;
 }
 
 ol,
@@ -789,13 +789,39 @@ select:focus-visible {
   overflow: hidden;
 }
 
+.team-card .reception-split {
+  border-style: solid;
+}
+
 .team-card .portrait-left,
 .team-card .portrait-right {
   position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 240px;
   overflow: hidden;
+}
+
+.team-card .portrait-blank {
+  flex: 1;
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  color: #2f5f5b;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background:
+    linear-gradient(145deg, rgba(226, 244, 240, 0.93), rgba(244, 252, 250, 0.96)),
+    repeating-linear-gradient(
+      -35deg,
+      rgba(14, 109, 105, 0.06),
+      rgba(14, 109, 105, 0.06) 16px,
+      rgba(14, 109, 105, 0) 16px,
+      rgba(14, 109, 105, 0) 32px
+    );
 }
 
 .team-card .portrait-left img,
